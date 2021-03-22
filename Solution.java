@@ -20,7 +20,6 @@ public class Solution {
 		List<Integer> splList = new ArrayList<>();
 		List<String> zList = new ArrayList<>();
 		List<String> zDupesList = new ArrayList<>();
-		int count = 0;
 		String outN = n;
 
 		boolean flag = true;
@@ -57,6 +56,14 @@ public class Solution {
 			String sResult = Integer.toString(xTemp-yTemp, b);
 
 			sZ = String.valueOf(sResult);
+
+
+			int oCheck = Integer.valueOf(sZ);
+
+			if(oCheck == 0){
+				return 1;
+			}//End I:*
+
 
 			if(origLength != sZ.length()){
 
@@ -122,7 +129,7 @@ public class Solution {
 
 		}//End W:*
 
-		return 0;
+		return zDupesList.size();
 
 	}//End M:*
 
